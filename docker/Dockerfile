@@ -5,12 +5,12 @@
 # docs/contributing/dockerfile/dockerfile.md and
 # docs/assets/contributing/dockerfile-stages-dependency.png
 
-ARG CUDA_VERSION=12.8.1
+ARG CUDA_VERSION=12.7
 #################### BASE BUILD IMAGE ####################
 # prepare basic build environment
 FROM nvidia/cuda:${CUDA_VERSION}-devel-ubuntu20.04 AS base
-ARG CUDA_VERSION=12.8.1
-ARG PYTHON_VERSION=3.12
+ARG CUDA_VERSION=12.7
+ARG PYTHON_VERSION=3.10.16
 ARG TARGETPLATFORM
 ENV DEBIAN_FRONTEND=noninteractive
 
