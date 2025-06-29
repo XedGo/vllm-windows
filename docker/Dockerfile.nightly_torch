@@ -2,13 +2,13 @@
 
 # for torch nightly, cuda >=12.6 is required,
 # use 12.8 due to FlashAttention issue with cuda 12.6 (https://github.com/vllm-project/vllm/issues/15435#issuecomment-2775924628)
-ARG CUDA_VERSION=12.8.0
+ARG CUDA_VERSION=12.7
 #
 #################### BASE BUILD IMAGE ####################
 # prepare basic build environment
 FROM nvidia/cuda:${CUDA_VERSION}-devel-ubuntu20.04 AS base
-ARG CUDA_VERSION=12.8.0
-ARG PYTHON_VERSION=3.12
+ARG CUDA_VERSION=12.7
+ARG PYTHON_VERSION=3.10.16
 ARG TARGETPLATFORM
 ENV DEBIAN_FRONTEND=noninteractive
 # Install Python and other dependencies
